@@ -1,0 +1,7 @@
+﻿cultivo,provincias_eurocrops,parcelas_total,superficie_total,prov_rend_secano,prov_rend_regadio,prov_algun_rend,prov_>=1000_parcelas,prov_>=5000_parcelas,prov_>=10000_parcelas,pct_top1,pct_top5,pct_top10,cv_secano_pct,cv_regadio_pct
+barley,49,1568969,23722753500,47,41,47,39,31,28,9.8,40.3,64.4,69.7,38.7
+common_soft_wheat,49,1198063,17379311500,48,40,48,44,30,26,16.8,40.6,61.6,72.8,35.5
+sunflower,45,390648,7674652300,39,38,40,23,15,10,21.7,60.6,82.8,55.0,38.8
+olive_plantations,47,2685589,23045251500,44,38,45,32,29,27,26.7,55.4,75.4,48.0,45.2
+vineyards_wine_vine_rebland_grapes,50,852319,7250931400,50,44,50,40,23,16,14.1,50.7,78.5,65.0,59.2
+almond,44,611445,6263970200,39,39,40,26,19,16,10.2,44.4,73.8,67.0,53.5
