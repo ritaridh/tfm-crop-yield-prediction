@@ -1,0 +1,16 @@
+variable,importancia_media,n_anos_positiva,mean_abs_SHAP,rank_perm,rank_shap,rank_medio
+radiacion_mj_m2_mar_abr,63.398,3,159.256,1.0,1.0,1.0
+sand_pct_0_30cm,40.363,3,84.345,2.0,4.0,3.0
+precipitacion_mm_campana,34.254,3,90.576,3.0,3.0,3.0
+radiacion_mj_m2_may_jun,23.474,3,118.151,5.0,2.0,3.5
+radiacion_mj_m2_campana,25.726,3,78.494,4.0,5.0,4.5
+NDMI_may_jun,15.5,2,42.358,6.0,10.0,8.0
+n_recintos,12.759,2,45.55,7.0,9.0,8.0
+NDMI_jul,8.225,3,55.277,12.0,7.0,9.5
+temp_media_c_may_jun,6.186,2,61.179,13.0,6.0,9.5
+radiacion_mj_m2_jul_ago,10.955,2,34.475,8.0,13.0,10.5
+superficie_eurocrops_ha,9.923,2,37.358,10.0,11.0,10.5
+clay_pct_0_30cm,10.442,2,35.526,9.0,12.0,10.5
+precipitacion_mm_mar_abr,3.931,1,50.808,18.0,8.0,13.0
+radiacion_mj_m2_sep_dic,8.339,3,25.677,11.0,19.0,15.0
+soc_g_kg_0_30cm,4.745,2,29.134,16.0,16.0,16.0
