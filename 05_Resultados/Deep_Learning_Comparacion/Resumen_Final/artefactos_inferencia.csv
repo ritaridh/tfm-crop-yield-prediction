@@ -1,0 +1,8 @@
+tipo,archivo
+Modelo,LSTM_multirrama_final.keras
+Configuración,config_inferencia_LSTM.json
+Imputer Sentinel-2,imputer_Sentinel_LSTM.joblib
+Imputer variables estáticas,imputer_Static_LSTM.joblib
+Scaler ERA5-Land,scaler_ERA5_LSTM.joblib
+Scaler Sentinel-2,scaler_Sentinel_LSTM.joblib
+Scaler variables estáticas,scaler_Static_LSTM.joblib
