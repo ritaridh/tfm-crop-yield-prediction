@@ -216,3 +216,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# TFM - datos brutos voluminosos / credenciales
+.cdsapirc
+01_Datos_originales/EuroCrops/
+01_Datos_originales/SoilGrids/
+01_Datos_originales/ERA5_Land/
+01_Datos_originales/Sentinel2/
+*.nc
+*.tif
+*.tiff
