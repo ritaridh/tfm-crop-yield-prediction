@@ -1,0 +1,36 @@
+# Entorno principal del TFM
+numpy==2.0.2
+pandas==2.2.2
+scikit-learn==1.6.1
+xgboost==3.3.0
+joblib==1.5.3
+
+# Análisis y visualización
+matplotlib
+seaborn
+scipy
+statsmodels
+shap
+
+# Datos geoespaciales
+geopandas
+rasterio
+shapely
+xarray
+netCDF4
+dbfread
+owslib
+
+# Modelado adicional utilizado en los notebooks
+tensorflow
+lightgbm
+catboost
+
+# Adquisición de datos / APIs
+cdsapi
+earthengine-api
+
+# Demo
+streamlit==1.61.1
+gradio
+qrcode[pil]
