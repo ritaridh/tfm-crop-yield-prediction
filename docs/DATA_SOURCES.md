@@ -1,6 +1,6 @@
 # Fuentes de datos
 
-Este documento identifica las fuentes externas utilizadas en el TFM y distingue entre los datos brutos originales y los productos procesados incluidos en el repositorio.
+Este documento identifica las fuentes externas utilizadas en el TFM y distingue entre los datos brutos originales y los productos procesados publicados en GitHub.
 
 ## MAPA
 
@@ -9,15 +9,15 @@ Fuente: Ministerio de Agricultura, Pesca y Alimentación (España), estadística
 Portal oficial:
 https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/agricultura/superficies-producciones-anuales-cultivos/
 
-En el repositorio se incluyen los ficheros Excel utilizados para trigo y cebada entre 2017 y 2023, además de algunos ficheros empleados durante la exploración inicial de cultivos candidatos.
+Se incluyen los Excel utilizados para trigo y cebada entre 2017 y 2023, además de algunos archivos empleados durante la exploración inicial de cultivos candidatos.
 
 ## EuroCrops
 
-Fuente utilizada: EuroCrops, registro Zenodo 14094196, versión que incorporó España completa.
+Fuente utilizada: EuroCrops, registro Zenodo 14094196.
 
 https://zenodo.org/records/14094196
 
-Los archivos provinciales completos no se incluyen en GitHub debido a su gran tamaño. Los productos provinciales derivados sí se incluyen en `02_Datos_procesados/`.
+Los archivos provinciales completos no se incluyen debido a su gran tamaño. Los productos provinciales derivados sí están en `02_Datos_procesados/`.
 
 ## ERA5-Land
 
@@ -25,7 +25,7 @@ Fuente: Copernicus Climate Change Service / Climate Data Store.
 
 https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land
 
-Los NetCDF originales no son necesarios para reproducir el bloque final de modelado. Se incluyen las tablas de características meteorológicas provinciales definitivas.
+Los NetCDF originales no se publican en el repositorio principal. Se incluyen las tablas provinciales definitivas utilizadas en el dataset maestro.
 
 ## SoilGrids
 
@@ -34,7 +34,7 @@ Fuente: ISRIC – World Soil Information, SoilGrids 2.0.
 https://soilgrids.org/
 https://docs.isric.org/globaldata/soilgrids/
 
-Los GeoTIFF originales no se incluyen debido a su tamaño. Se incluyen las tablas provinciales derivadas.
+Los GeoTIFF originales no se incluyen por tamaño. Se publican las tablas provinciales derivadas.
 
 ## Sentinel-2
 
@@ -46,8 +46,8 @@ Se incluyen los productos tabulares provinciales utilizados en el dataset maestr
 
 ## Límites administrativos
 
-La geometría provincial procesada empleada por los notebooks se conserva como `02_Datos_procesados/provincias_CNIG_50.gpkg` cuando el tamaño del repositorio lo permite.
+La geometría provincial procesada `provincias_CNIG_50.gpkg` se utilizó en determinadas etapas geoespaciales y de control, pero no se publica en este repositorio. No es necesaria para inspeccionar el dataset maestro, las métricas finales ni los artefactos de inferencia.
 
-## Nota de reproducibilidad
+## Nota
 
-La ausencia de algunos datos brutos de gran tamaño no afecta a la reproducción de los análisis finales de los notebooks 05–07, que parten de los productos procesados y del dataset maestro definitivo.
+El repositorio está orientado a la trazabilidad del flujo y a la auditoría del resultado final. La reproducción íntegra desde todas las fuentes brutas requiere descargar los recursos externos indicados anteriormente.
