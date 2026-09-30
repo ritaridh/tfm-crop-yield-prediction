@@ -1,0 +1,2 @@
+plataforma,modelo,estado,referencias_por_defecto,inputs
+Streamlit Community Cloud,LSTM_multirrama,Operativo,2017-2022,"ERA5-Land, Sentinel-2, suelo, estructura agrícola y cultivo"
