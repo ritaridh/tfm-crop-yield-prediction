@@ -1,0 +1,6 @@
+ranking,modelo,familia,MAE,RMSE,R2
+1,LSTM_multirrama,Deep Learning,572.012,714.903,0.527
+2,XGB_tuned,Machine Learning,926.008,1102.817,-0.126
+3,RF_XGB_50_50,Ensemble ML,949.49,1118.798,-0.159
+4,RF70_XGB30,Ensemble ML,961.305,1129.432,-0.181
+5,RF_tuned,Machine Learning,980.285,1149.732,-0.224
