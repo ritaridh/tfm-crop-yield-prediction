@@ -1,0 +1,3 @@
+cultivo,n,observado_medio_kg_ha,predicho_medio_kg_ha,sesgo_kg_ha,MAE_kg_ha,RMSE_kg_ha,R2
+barley,47,1346.468,1622.202,275.734,562.492,713.921,0.409
+common_soft_wheat,48,1563.958,1680.689,116.731,581.334,715.863,0.597
