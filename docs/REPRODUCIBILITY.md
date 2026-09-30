@@ -1,42 +1,59 @@
 # Reproducibilidad
 
-## Opción recomendada: Google Colab
+## Qué puede revisarse directamente
 
-Ejecutar en una celda nueva:
+Sin ejecutar código, el repositorio permite auditar:
 
-```python
-!git clone https://github.com/ritaridh/tfm-crop-yield-prediction.git /content/TFM_Rendimiento_cultivos
-%cd /content/TFM_Rendimiento_cultivos
-!pip install -r requirements.txt
-```
+- el dataset maestro definitivo;
+- las tablas y métricas finales;
+- las figuras utilizadas en el bloque final del TFM;
+- el modelo LSTM final;
+- los scalers, imputers y configuración de inferencia;
+- los notebooks que documentan el desarrollo.
 
-Después puede abrirse el notebook correspondiente desde la carpeta `notebooks/`.
+## Google Colab
 
-Las copias de GitHub han sido adaptadas para utilizar `/content/TFM_Rendimiento_cultivos` y no dependen del Google Drive personal de la autora.
+Los notebooks de GitHub incluyen una primera celda que clona automáticamente este repositorio en:
 
-## Ruta reproducible principal
+`/content/TFM_Rendimiento_cultivos`
 
-Para reproducir el bloque final sin descargar los datos geoespaciales brutos:
+Por tanto, pueden abrirse directamente desde GitHub en Google Colab.
 
-1. usar `02_Datos_procesados/dataset_maestro_TFM_2017_2023_DEFINITIVO.csv`;
-2. ejecutar `notebooks/05_Analisis_Exploratorio_Preprocesado.ipynb`;
-3. ejecutar `notebooks/06_Modelado_Predictivo.ipynb`;
-4. ejecutar `notebooks/07_Deep_Learning_Multirrama.ipynb`.
+La instalación completa de `requirements.txt` puede tardar varios minutos porque reúne dependencias de Machine Learning, Deep Learning y procesamiento geoespacial.
 
-## Notebooks de adquisición y preprocesado
+## Niveles de reproducibilidad
 
-Los notebooks 01–04 documentan el proceso completo, pero algunos pasos requieren datos externos que no se almacenan en GitHub por tamaño:
+### 1. Resultado final e inferencia
+
+Los elementos principales del resultado final están incluidos:
+
+- `02_Datos_procesados/dataset_maestro_TFM_2017_2023_DEFINITIVO.csv`
+- `models/DL/LSTM_multirrama_final.keras`
+- scalers e imputers de la LSTM;
+- `models/DL/config_inferencia_LSTM.json`;
+- tablas y figuras finales.
+
+### 2. Desarrollo y modelado
+
+Los notebooks 05–07 conservan la trazabilidad del desarrollo. Los notebooks 05 y 06 incluyen también controles e iteraciones históricas, por lo que una ejecución completa de todas las celdas puede hacer referencia a archivos intermedios que no se publican cuando existe una versión definitiva o cuando se trata de datos voluminosos.
+
+Esto no impide revisar el código, las decisiones metodológicas ni los resultados finales publicados.
+
+### 3. Adquisición y preprocesado desde datos brutos
+
+Los notebooks 01–04 documentan el procesamiento de las fuentes originales. Para reproducirlos íntegramente deben obtenerse algunos recursos externos:
 
 - EuroCrops provincial completo;
 - ERA5-Land original;
-- GeoTIFF originales de SoilGrids;
-- determinadas operaciones de Sentinel-2 / servicios externos.
+- GeoTIFF de SoilGrids;
+- datos/servicios necesarios para Sentinel-2;
+- geometría administrativa utilizada en determinados controles.
 
-Las fuentes y rutas esperadas se describen en `DATA_SOURCES.md`.
+Las fuentes se describen en `DATA_SOURCES.md`.
 
-## Versiones de entorno
+## Entorno de los modelos serializados
 
-Los modelos ML serializados para despliegue se generaron con las versiones fijadas en `requirements.txt`, especialmente:
+Para los artefactos ML/Demo se conservaron las versiones:
 
 - scikit-learn 1.6.1
 - xgboost 3.3.0
@@ -44,15 +61,15 @@ Los modelos ML serializados para despliegue se generaron con las versiones fijad
 - numpy 2.0.2
 - joblib 1.5.3
 
-Usar versiones distintas de scikit-learn para cargar un archivo `.joblib` puede generar incompatibilidades.
+El repositorio de la demo fija además TensorFlow 2.21.0.
 
-## Test temporal
+## Separación temporal
 
 - desarrollo y validación: 2017–2022;
 - test independiente: 2023;
 - observaciones de desarrollo: 572;
 - observaciones del test 2023: 95.
 
-## Principio de trazabilidad
+## Trazabilidad
 
-Los archivos del Google Drive original no se modifican durante la preparación de este repositorio. Las adaptaciones de rutas y ejecución se realizan únicamente en las copias publicadas en GitHub.
+La preparación de este repositorio se realiza sobre copias del código y de los resultados. Los archivos originales del Google Drive del proyecto no se modifican.
